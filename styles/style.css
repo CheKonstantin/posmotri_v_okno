@@ -159,7 +159,7 @@ ol {
 }
 
 .visually-hidden {
-  position: absolute;
+  /* position: absolute; */
   overflow: hidden;
   clip: rect(0 0 0 0);
   inline-size: 1px;
@@ -206,7 +206,7 @@ ol {
 
 .search-form__pseudo-checkbox::before {
   content: '';
-  position: absolute;
+  /* position: absolute; */
   inset: 0;
   width: 19px;
   height: 19px;
@@ -215,7 +215,7 @@ ol {
 
 .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
+  /* position: absolute; */
   inset: 2px;
   width: 15px;
   height: 15px;
