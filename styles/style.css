@@ -1,3 +1,8 @@
+:root {
+  --color-white: #fff;
+  --color-dark: #545050;
+}
+
 *,
 *::before,
 *::after {
@@ -13,7 +18,7 @@ html {
   justify-content: center;
   align-items: center;
   margin: auto;
-  color: #fff;
+  color: var(--color-white);
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
@@ -87,7 +92,7 @@ ol {
 }
 
 .content__accent {
-  color: #545050;
+  color: var(--color-dark);
 }
 
 .content__video-card {
@@ -113,7 +118,7 @@ ol {
 
 .content__video-card-title {
   margin-bottom: 6px;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   font-family: 'Oswald';
   font-weight: 700;
   font-size: 30px;
@@ -123,7 +128,7 @@ ol {
 }
 
 .content__video-card-description {
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   font-family: 'Fira Sans Condensed';
   font-weight: 400;
   font-size: 18px;
@@ -136,7 +141,7 @@ ol {
 }
 
 .content__card-link_current .content__video-card-description-container {
-  background-color: #545050;
+  background-color: var(--color-dark);
 }
 
 .result__video-container,
@@ -146,7 +151,7 @@ ol {
 
 .search-form__fieldset-title {
   margin-bottom: 5px;
-  color: rgb(255, 255, 255);
+  color: var(--color-white);
   font-family: 'Fira Sans Condensed';
   font-weight: 400;
   font-size: 18px;
@@ -178,15 +183,20 @@ ol {
   user-select: none;
 }
 
+.search-form__label:has(.search-form__checkbox) {
+  display: flex;
+}
+
 .search-form__label-text {
-  margin-left: 24px;
+  margin-left: 5px;
+  border-bottom: 1px solid transparent;
 }
 
 .search-form__textfield {
   min-width: 225px;
   border: none;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
+  border-top: 1px solid var(--color-white);
+  border-bottom: 1px solid var(--color-white);
   color: rgba(255, 255, 255, 0.7);
   font-family: 'Fira Sans Condensed';
   font-weight: 400;
@@ -200,27 +210,29 @@ ol {
 
 .search-form__pseudo-checkbox {
   position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 19px;
   height: 19px;
+  border: 1px solid var(--color-white);
 }
 
 .search-form__pseudo-checkbox::before {
   content: '';
-  position: absolute;
-  inset: 0;
-  width: 19px;
-  height: 19px;
-  border: 1px solid #ffffff;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .search-form__pseudo-checkbox::after {
   content: '';
-  position: absolute;
-  inset: 2px;
-  width: 15px;
+  display: block;
+  min-width: 15px;
   height: 15px;
+  margin: 2px;
   opacity: 0;
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
@@ -229,8 +241,8 @@ ol {
 
 .button {
   min-height: 34px;
-  border: 1px solid rgb(255, 255, 255);
-  color: rgb(255, 255, 255);
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
   font-family: 'Fira Sans Condensed';
   font-weight: 700;
   font-size: 18px;
@@ -253,7 +265,7 @@ ol {
 
 /* state active */
 .search-form__label:has(.search-form__textfield:active) {
-  outline: 1px solid #fff;
+  outline: 1px solid var(--color-white);
 }
 
 .search-form__label:has(:active) .search-form__textfield {
@@ -262,17 +274,17 @@ ol {
 }
 
 .button:active {
-  background: #545050;
+  background: var(--color-dark);
 }
 
 .content__video-card:active {
-  background: #545050;
+  background: var(--color-dark);
 }
 
 /* state hover */
 
 .search-form__label:has(.search-form__checkbox):hover .search-form__label-text {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--color-white);
 }
 
 .button:hover {
@@ -281,13 +293,13 @@ ol {
 
 .content__video-card:hover {
   text-decoration: underline;
-  text-decoration-color: #fff;
+  text-decoration-color: var(--color-white);
 }
 
 /* state focus */
 
 .search-form__label:has(:focus-visible) {
-  outline: 1px solid #fff;
+  outline: 1px solid var(--color-white);
   outline-offset: 1px;
 }
 
@@ -296,11 +308,11 @@ ol {
 }
 
 .button:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid var(--color-white);
   outline-offset: 1px;
 }
 
 .content__video-card:focus-visible {
-  outline: 1px solid #fff;
+  outline: 1px solid var(--color-white);
 }
 
